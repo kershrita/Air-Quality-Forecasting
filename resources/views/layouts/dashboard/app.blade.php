@@ -18,13 +18,13 @@
                 @yield('main')
             </div>
             <!-- Layout container -->
-
             <!-- / Layout page -->
         </div>
 
         <!-- Overlay -->
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
+    @include('layouts.dashboard.footer')
 
     <!--end::Wrapper-->
 
