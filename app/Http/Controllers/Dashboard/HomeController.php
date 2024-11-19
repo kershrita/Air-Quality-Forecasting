@@ -21,7 +21,7 @@ class HomeController extends Controller
         $city = $request->get('city');
 
         $start_date = $request->input('start_date', '2023-01-01');  // Default start date if not provided
-        $end_date = $request->input('end_date', '2023-1-31');    // Default end date if not provided
+        $end_date = $request->input('end_date', '2023-1-10');    // Default end date if not provided
         $start_date = Carbon::parse($start_date);
         $end_date = Carbon::parse($end_date);
         // Initialize the query
