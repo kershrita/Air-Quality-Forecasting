@@ -137,7 +137,11 @@ class HomeController extends Controller
                 'ch4' => $item->avg_ch4,
             ]);
 
-        $correlationMatrix = $this->computeCorrelationMatrix($correlationData);
+            if($correlationData->count()>0){
+                $correlationMatrix = $this->computeCorrelationMatrix($correlationData);
+            }else{
+                $correlationMatrix=[];
+            }
         return view('dashboard.dashboard2', [
             'cityStatistics' => $filteredData,
             'correlationMatrix' => $correlationMatrix, // Pass correlation matrix to frontend
